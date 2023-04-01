@@ -1,6 +1,6 @@
 #! /bin/sh
 #! /usr/bin/python
-../start.sh
+../../start.sh
 
 /usr/local/hadoop/bin/hdfs dfs -rm -r /p1/input/
 /usr/local/hadoop/bin/hdfs dfs -rm -r /p1/output/
@@ -51,4 +51,4 @@ echo "--------------------------- Question 4: Most common color to be ticketed -
 /usr/local/hadoop/bin/hdfs dfs -rm -r /p1/input/
 /usr/local/hadoop/bin/hdfs dfs -rm -r /p1/output/
 
-../stop.sh
+../../stop.sh
