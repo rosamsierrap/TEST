@@ -8,8 +8,8 @@
 /usr/local/hadoop/bin/hdfs dfs -copyFromLocal ../../mapreduce-test-data/nyc_parking_violations_data.csv /p1/input/
 
 /usr/local/hadoop/bin/hadoop jar /usr/local/hadoop/share/hadoop/tools/lib/hadoop-streaming-3.3.1.jar  \
--file ../../mapreduce-test-python/part1/hour_mapper.py -mapper ../../mapreduce-test-python/part1/hour_mapper.py \
--file ../../mapreduce-test-python/part1/reducer.py -reducer ../../mapreduce-test-python/part1/reducer.py \
+-file hour_mapper.py -mapper hour_mapper.py \
+-file reducer.py -reducer reducer.py \
 -input /p1/input/* -output /p1/output/Q1
 
 /usr/local/hadoop/bin/hadoop jar /usr/local/hadoop/share/hadoop/tools/lib/hadoop-streaming-3.3.1.jar  \
