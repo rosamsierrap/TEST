@@ -1,5 +1,5 @@
 #!/bin/sh
-../../start.sh
+../../../start.sh
 /usr/local/hadoop/bin/hdfs dfs -rm -r /part2/input/
 /usr/local/hadoop/bin/hdfs dfs -rm -r /part2/output/
 /usr/local/hadoop/bin/hdfs dfs -mkdir -p /part2/input/
@@ -15,4 +15,4 @@ echo "--------------------------- Question 1: Most unwanted defender ranking ---
 
 /usr/local/hadoop/bin/hdfs dfs -rm -r /part2/input/
 /usr/local/hadoop/bin/hdfs dfs -rm -r /part2/output/
-../../stop.sh
+../../../stop.sh
