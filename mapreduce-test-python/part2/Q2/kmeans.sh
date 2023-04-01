@@ -1,9 +1,9 @@
 #!/bin/sh
-../../start.sh
+../../../start.sh
 
 /usr/local/hadoop/bin/hdfs dfs -rm -r /part2/
 /usr/local/hadoop/bin/hdfs dfs -mkdir -p /part2/matrix/input/
-/usr/local/hadoop/bin/hdfs dfs -copyFromLocal ../../mapreduce-test-data/hdfstest2/shot_logs.csv /part2/matrix/input/
+/usr/local/hadoop/bin/hdfs dfs -copyFromLocal ../../../mapreduce-test-data/shot_logs.csv /part2/matrix/input/
 
 # First MapReduce job to compute each average per player > this is done for shot distance, closest defender distance and remaining shot clock time
 /usr/local/hadoop/bin/hadoop jar /usr/local/hadoop/share/hadoop/tools/lib/hadoop-streaming-3.3.1.jar \
@@ -75,4 +75,4 @@ echo "------------------------- resulting clusters -------------------------"
 
 /usr/local/hadoop/bin/hdfs dfs -rm -r /part2/
 
-../../stop.sh
+../../../stop.sh
