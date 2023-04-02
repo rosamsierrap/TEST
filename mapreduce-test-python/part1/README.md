@@ -11,13 +11,10 @@ The following 4 questions were answered using this code:
 
 ## Getting Started
 
-Proceed to clone the repository into the already existing `hdfs-test` directory in our Cloud cluster.
+Proceed to clone the repository into the Cloud cluster root folder (./).
 
-`git clone https://github.com/Jaydotcom27/part1.git`
+`git clone https://github.com/rosamsierrap/Project1.git`
 
-Also consider cloning some test data into the already existing `hdfs-test-data` in our Cloud cluster.
-
-`git clone https://github.com/Jaydotcom27/hdfstest1`
 
 ## Data
 
@@ -27,7 +24,7 @@ The data used in this analysis was obtained from the NYC Open Data website, whic
 
 To run this code you need a functional HDFS system running, for our experiments a 3 node cluster hosted on Google Cloud was the way to go. Two worker nodes and one manager orchestrating.
 The driver code is stored in the file `part1.sh` and it will run the mappers/reducer to answer all the questions. Make sure to double check the appropiate location for the data csv, it can be found
-inside of the driver code where there's a copyFromLocal statement `/usr/local/hadoop/bin/hdfs dfs -copyFromLocal ../mapreduce-test-data/hdfstest1/nyc_parking_violations_data.csv /part1/input/`. 
+inside of the driver code where there's a copyFromLocal statement `/usr/local/hadoop/bin/hdfs dfs -copyFromLocal ../../mapreduce-test-data/nyc_parking_violations_data.csv /p1/input/`. 
 This route is expected to be different depending on each system file distribution. 
 
 ## Findings
