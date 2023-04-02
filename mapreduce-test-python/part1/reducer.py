@@ -18,6 +18,6 @@ for line in sys.stdin:
 # We sort the dictionary in descending order, greater values will be above. 
 sorted_dict = sorted(reducer_keys.items(), key=lambda x: x[1], reverse=True)
 
-# Print the top 15 
-for sorted_key, count in sorted_dict:#[:15]
+# Print the top 10
+for sorted_key, count in sorted_dict[:10]:
     print('{}\t{}'.format(sorted_key, count))
