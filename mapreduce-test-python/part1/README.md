@@ -29,8 +29,8 @@ This route is expected to be different depending on each system file distributio
 
 ## Findings
 
-1. 9AM is the time at which more tickets are issued.
-2. 2021 is the car year with more issued tickets, Suburban would be the vehicle type.
+1. 4PM is the time at which more tickets are issued.
+2. 2017 is the car year with more issued tickets, Suburban would be the vehicle type.
 3. NY is the state at which more tickets are issued.
 4. Gray vehicles seem to be the ones being issued more tickets.
 
