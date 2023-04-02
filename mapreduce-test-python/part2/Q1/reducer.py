@@ -37,5 +37,5 @@ rates.sort(key=itemgetter(1))
 
 # print the top 10 defenders with the lowest rate, meaning; most unwanted defender
 
-for defender, rate, shots_taken in rates[:10]:
+for defender, rate, shots_taken in rates[:100]:
     print('{}\t{:.2%}\t{:,d}'.format(defender, rate, shots_taken))
