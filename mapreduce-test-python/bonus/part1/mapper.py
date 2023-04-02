@@ -2,7 +2,7 @@
 import sys
 import csv
 
-street_codes=['34510','10030','34050']
+street_codes=['34510','10030','34050','25390','22040']
 #Filter Vehicle colors values found in the range of data, there can be more values options
 black_colors= ["BLK","BK","BLACK","B K","BLAK","BLCK","BC"]
 
