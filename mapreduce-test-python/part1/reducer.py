@@ -19,5 +19,5 @@ for line in sys.stdin:
 sorted_dict = sorted(reducer_keys.items(), key=lambda x: x[1], reverse=True)
 
 # Print the top 15 
-for sorted_key, count in sorted_dict[:15]:
+for sorted_key, count in sorted_dict:#[:15]
     print('{}\t{}'.format(sorted_key, count))
