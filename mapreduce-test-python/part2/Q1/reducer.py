@@ -10,7 +10,8 @@ defenders = {}
 for line in sys.stdin:
     # get data from input line and split it
     pair, shooting_data = line.strip().split('\t')
-    _, defender = pair.split('-')
+    defender = pair
+    #_, defender = pair.split('-')
     shots_taken, made = shooting_data.split(',')
     
     # check if defender already exists in the dictionary and update their shot and successful shots count
