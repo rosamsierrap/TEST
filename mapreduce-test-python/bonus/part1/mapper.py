@@ -1,5 +1,6 @@
 #!/usr/bin/python
 import sys
+import csv
 
 street_codes=['34510','10030','34050']
 #Filter Vehicle colors values found in the range of data, there can be more values options
