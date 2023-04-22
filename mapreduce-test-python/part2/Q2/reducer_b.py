@@ -2,24 +2,34 @@
 # ---- coding:utf-8 ----
 import random
 import sys
+from pyspark import SparkContext, SparkConf
+
+conf = SparkConf().setAppName("PART12")
+sc = SparkContext(conf=conf)
+
+textFile = sc.textFile(sys.argv[1]) #data
+info = textFile.flatMap(lambda line: line.split("\t")) #line
+
+p = info.map(lambda line: (line.split(",")[0],  #player
+            (eval(line.split(",")[1]),  #data
+            )) \
+         .groupByKey() \
+         .mapValues(list) \
+         .collectAsMap()
+
 cntd = 4
-p = {}
 cntds = {}
 
-for line in sys.stdin:
-    line = line.split('\t')
-    player = line[0]
-    data = eval(line[1])
-    if player not in p:
-        p[player] = []
-    p[player].extend(data)
-
-    
-def l2(set1,set2):
-    d=0
+def l2(set1, set2):  #DONE
+    d = 0
     for i in range(len(set1)):
-        d+=(set1[i]-set2[i])**2
-    return(d**0.5)
+        d += (set1[i] - set2[i]) ** 2
+    return( ** 0.5)
+#########################
+             
+             
+             
+ #####
 
 for player,data in p.items():
     if len(data) < 4:
